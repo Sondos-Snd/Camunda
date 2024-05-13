@@ -6,13 +6,15 @@
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="SequenceFlow1" sourceRef="StartEventProcessStarted" targetRef="Activity_1kxa3z3" />
     <bpmn:sequenceFlow id="Flow_09r1yh5" sourceRef="Activity_1kxa3z3" targetRef="Activity_18pvvxw" />
-    <bpmn:exclusiveGateway id="Gateway_103clej">
+    <bpmn:exclusiveGateway id="Gateway_103clej" default="Flow_0fnlef2">
       <bpmn:incoming>Flow_1xyjiie</bpmn:incoming>
       <bpmn:outgoing>Flow_0zrtay9</bpmn:outgoing>
       <bpmn:outgoing>Flow_0fnlef2</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="Flow_1xyjiie" sourceRef="Activity_18pvvxw" targetRef="Gateway_103clej" />
-    <bpmn:sequenceFlow id="Flow_0zrtay9" sourceRef="Gateway_103clej" targetRef="Activity_0cogobv" />
+    <bpmn:sequenceFlow id="Flow_0zrtay9" sourceRef="Gateway_103clej" targetRef="Activity_0cogobv">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${isValidated=="yes"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0fnlef2" sourceRef="Gateway_103clej" targetRef="Activity_1njq7zi" />
     <bpmn:endEvent id="Event_10hscjy" name="Process ended">
       <bpmn:incoming>Flow_1fjdukg</bpmn:incoming>
@@ -31,6 +33,9 @@
       <bpmn:outgoing>Flow_1fjdukg</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:callActivity id="Activity_18pvvxw" name="calling-validator" calledElement="servlet-callactivity-subprocess-validator">
+      <bpmn:extensionElements>
+        <camunda:out variables="all" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_09r1yh5</bpmn:incoming>
       <bpmn:outgoing>Flow_1xyjiie</bpmn:outgoing>
     </bpmn:callActivity>
