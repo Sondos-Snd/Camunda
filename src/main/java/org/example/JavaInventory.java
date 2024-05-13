@@ -1,9 +1,11 @@
 package org.example;
+import java.util.List;
 import java.util.logging.Logger;
 
 import org.camunda.bpm.engine.delegate.BpmnError;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
+import org.camunda.bpm.engine.task.Task;
 
 public class JavaInventory implements JavaDelegate {
 
@@ -29,6 +31,11 @@ public class JavaInventory implements JavaDelegate {
                 throw e;
             }
         }
+
+//        List<Task> tasks=taskService.createtaskQuery()
+//                .taskAssignee("me")
+//                .processvariableValueEqausl("meagain","999")
+//                .orderByDueDate().asc().list();
 
     }
 }
