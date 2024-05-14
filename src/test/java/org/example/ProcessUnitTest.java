@@ -58,5 +58,7 @@ public class ProcessUnitTest {
         assertEquals("watch",task.getId());
         taskService.complete(task.getId());
 
+        assertEquals(0,runtimeService.createExecutionQuery().count());
+
     }
 }
