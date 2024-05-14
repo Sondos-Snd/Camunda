@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c162a64-365f-4765-8057-91db32fdbfb4" name="Changes" comment="task service query">
+    <list default="true" id="9c162a64-365f-4765-8057-91db32fdbfb4" name="Changes" comment="form inputs - start and user task">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/forms/start-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/forms/start-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ProcessUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ProcessUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715597515463</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="form inputs - start and user task">
+      <created>1715600339673</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715600339673</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -141,6 +149,7 @@
     <MESSAGE value="validator process diagram flow" />
     <MESSAGE value="add error handling service" />
     <MESSAGE value="task service query" />
-    <option name="LAST_COMMIT_MESSAGE" value="task service query" />
+    <MESSAGE value="form inputs - start and user task" />
+    <option name="LAST_COMMIT_MESSAGE" value="form inputs - start and user task" />
   </component>
 </project>
